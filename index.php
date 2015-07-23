@@ -22,6 +22,7 @@ session_start();
 <html lang="fr">
 	<head>
 		<?php include 'inc/head.php'; ?>
+        <title>Bugtracker - Têtes Brûlées</title>
 	</head>
 <body>
 	<?php 

@@ -35,6 +35,7 @@ if (!isset($_GET['r']) && !isset($_GET['n']) && !isset($_GET['c']) && !isset($_G
 				</tbody>
 			</table>
 			<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Enregistrer</button>
+            <a href="index.php?n" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Nouveau</a>
 		</form>
 	<?php } else if(!Auth::isLogged()) {
 	?>
