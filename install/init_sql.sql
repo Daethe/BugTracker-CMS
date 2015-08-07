@@ -6,7 +6,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
-CREATE TABLE IF NOT EXISTS `bug_content` (`id` int(11) NOT NULL, `titre` varchar(255) NOT NULL, `link` varchar(255) NOT NULL, `linkimg` varchar(255) NOT NULL, `resolve` int(1) NOT NULL DEFAULT '0') ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `bug_content` (`id` int(11) NOT NULL, `titre` varchar(255) NOT NULL, `content` text, `link` varchar(255) NOT NULL, `linkimg` varchar(255) NOT NULL, `resolve` int(1) NOT NULL DEFAULT '0') ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `demand_content` (`id` int(11) NOT NULL, `titre` varchar(255) NOT NULL, `content` text NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `faq` (`id` int(11) NOT NULL, `question` varchar(255) NOT NULL, `answer` text NOT NULL) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 CREATE TABLE IF NOT EXISTS `user`(`id` int(11) NOT NULL, `login` varchar(60) NOT NULL, `pass` varchar(255) NOT NULL) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;

@@ -10,10 +10,10 @@ if (!isset($_GET['r']) && !isset($_GET['n']) && !isset($_GET['c']) && !isset($_G
 			<table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
 				<thead>
 					<tr>
-						<th class="mdl-data-table__cell--non-numeric">Titre</th>
-						<th>Lien</th>
-						<th>Plus</th>
-						<th>Résolu ?</th>
+						<th class="mdl-data-table__cell--non-numeric"><?php echo Lang::strLang("tit_pb"); ?></th>
+						<th><?php echo Lang::strLang("lin_pb"); ?></th>
+						<th><?php echo Lang::strLang("plu_pb"); ?></th>
+						<th><?php echo Lang::strLang("resadmin_pb"); ?></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -34,17 +34,17 @@ if (!isset($_GET['r']) && !isset($_GET['n']) && !isset($_GET['c']) && !isset($_G
 					?>
 				</tbody>
 			</table>
-			<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Enregistrer</button>
-            <a href="index.php?n" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Nouveau</a>
+			<button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"><?php echo Lang::strLang("save_btn"); ?></button>
+            <a href="index.php?n" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"><?php echo Lang::strLang("new_btn"); ?></a>
 		</form>
 	<?php } else if(!Auth::isLogged()) {
 	?>
 		<table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
 			<thead>
 				<tr>
-					<th class="mdl-data-table__cell--non-numeric">Titre</th>
-					<th>Lien</th>
-					<th>Plus</th>
+                    <th class="mdl-data-table__cell--non-numeric"><?php echo Lang::strLang("tit_pb"); ?></th>
+                    <th><?php echo Lang::strLang("lin_pb"); ?></th>
+                    <th><?php echo Lang::strLang("plu_pb"); ?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -53,14 +53,14 @@ if (!isset($_GET['r']) && !isset($_GET['n']) && !isset($_GET['c']) && !isset($_G
 						<tr>
 							<td class="mdl-data-table__cell--non-numeric"><?php echo $data['titre']; ?></td>
 							<td><a href="<?php echo $data['link']; ?>" target=_blank><?php echo $data['link']; ?></a></td>
-							<td><a href="index.php?c=<?php echo $data['id']; ?>">Voir plus</a></td>
+							<td><a href="index.php?c=<?php echo $data['id']; ?>"><?php echo Lang::strLang("view_more"); ?></a></td>
 						</tr>
 					<?php }
 				?>
 			</tbody>
 		</table>
 		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-			<a href="index.php?n">Signaler un problème</a>
+			<a href="index.php?n"><?php echo Lang::strLang("sig_pb"); ?></a>
 		</button>
 	<?php 
 	} 
@@ -72,9 +72,9 @@ if (!isset($_GET['r']) && !isset($_GET['n']) && !isset($_GET['c']) && !isset($_G
 	<table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp">
 			<thead>
 				<tr>
-					<th class="mdl-data-table__cell--non-numeric">Titre</th>
-					<th>Contenu de la demande </th>
-					<th>Plus</th>
+					<th class="mdl-data-table__cell--non-numeric"><?php echo Lang::strLang("tit_pb"); ?></th>
+					<th><?php echo Lang::strLang("con_content"); ?></th>
+					<th><?php echo Lang::strLang("plu_pb"); ?></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -96,13 +96,13 @@ if (!isset($_GET['r']) && !isset($_GET['n']) && !isset($_GET['c']) && !isset($_G
 									
 									?>
 							</td>
-							<td><a href="index.php?cd=<?php echo $data['id']; ?>">Voir plus</a></td>
+							<td><a href="index.php?cd=<?php echo $data['id']; ?>"><?php Lang::strLang("view_more"); ?></a></td>
 						</tr>
 					<?php }
 				?>
 			</tbody>
 		</table>
 		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-			<a href="index.php?nd">Demander</a>
+			<a href="index.php?nd"><?php echo Lang::strLang("dmd_btn"); ?></a>
 		</button>
 <?php } ?>

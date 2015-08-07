@@ -1,4 +1,7 @@
-<?php include 'inc/bdd.php'; ?>
+<?php
+	include 'inc/bdd.php';
+	require 'lang/lang.php';
+?>
 
 <!doctype html>
 <html lang="fr">

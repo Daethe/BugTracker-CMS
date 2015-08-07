@@ -236,3 +236,10 @@ form > .mdl-data-table {margin: 0;}
 .div-width {margin: 0 auto;}
 
 div > textarea {font-family: "Roboto"}
+
+.lang--icon {width: 40px; height: 40px;}
+.material-icons img {width: 36px; margin-left: -6px;}
+.flag-icons {line-height: 10px !important;}
+
+.flag > img {height: 40%;}
+.flag > a   {margin-left: 10px;}
